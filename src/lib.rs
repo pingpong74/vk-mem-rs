@@ -41,7 +41,7 @@ unsafe impl Sync for Allocator {}
 ///
 /// Some kinds allocations can be in lost state.
 #[derive(Clone, Copy, Debug)]
-pub struct Allocation(ffi::VmaAllocation);
+pub struct Allocation(pub ffi::VmaAllocation);
 unsafe impl Send for Allocation {}
 unsafe impl Sync for Allocation {}
 
